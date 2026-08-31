@@ -168,7 +168,7 @@ class Items extends \XoopsObject
     public function getValuesItems($keys = null, $format = null, $maxDepth = null)
     {
         $helper   = \XoopsModules\Wgblocks\Helper::getInstance();
-        $utility  = new \XoopsModules\Wgblocks\Utility();
+        $utility  = new \XoopsModules\Wgblocks\Common\SysUtility();
         $ret      = $this->getValues($keys, $format, $maxDepth);
         $typeText = '';
 
