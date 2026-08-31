@@ -38,7 +38,7 @@ $helper->loadLanguage('common');
 
 switch ($op) {
     case 'load':
-        if (\Xmf\Request::hasVar('ok', 'REQUEST') && 1 == $_REQUEST['ok']) {
+        if (1 === \Xmf\Request::getInt('ok', 'REQUEST')) {
             if (!$GLOBALS['xoopsSecurity']->check()) {
                 \redirect_header('../admin/index.php', 3, \implode(',', $GLOBALS['xoopsSecurity']->getErrors()));
             }
@@ -164,12 +164,12 @@ function exportSchema()
  *                       Each element of the outer array represents a single table row.
  *                       Each row is an associative array in 'column' => 'value' format.
  * @param string $search name of column for which the value should be replaced
- * @param        $replace
+ * @param string $replace
  * @return int number of rows inserted
  * @throws Exception
  * @throws Exception
  */
-function loadTableFromArrayWithReplace($table, $data, $search, $replace)
+function loadTableFromArrayWithReplace(string $table, array $data, string $search, string $replace)
 {
     /** @var \XoopsDatabase $db */
     $db = \XoopsDatabaseFactory::getDatabaseConnection();

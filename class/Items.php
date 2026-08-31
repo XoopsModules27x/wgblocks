@@ -85,7 +85,7 @@ class Items extends \XoopsObject
      * @param bool $action
      * @return \XoopsThemeForm
      */
-    public function getFormItems($action = false)
+    public function getFormItems(bool $action = false)
     {
         $helper = \XoopsModules\Wgblocks\Helper::getInstance();
         if (!$action) {

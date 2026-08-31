@@ -187,7 +187,7 @@ switch ($op) {
         $GLOBALS['xoopsTpl']->assign('navigation', $adminObject->displayNavigation('items.php'));
         $itemsObj = $itemsHandler->get($itemId);
         $itemName = $itemsObj->getVar('item_name');
-        if (isset($_REQUEST['ok']) && 1 == $_REQUEST['ok']) {
+        if (1 === \Xmf\Request::getInt('ok', 'REQUEST')) {
             if (!$GLOBALS['xoopsSecurity']->check()) {
                 \redirect_header('items.php', 3, \implode(', ', $GLOBALS['xoopsSecurity']->getErrors()));
             }

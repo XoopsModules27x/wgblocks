@@ -30,16 +30,16 @@ namespace XoopsModules\Wgblocks;
 interface Constants
 {
     // Constants for tables
-    public const TABLE_ITEMS = 0;
+    public const int TABLE_ITEMS = 0;
 
     // Constants for status
-    public const STATUS_NONE    = 0;
-    public const STATUS_OFFLINE = 1;
-    public const STATUS_ONLINE  = 2;
+    public const int STATUS_NONE    = 0;
+    public const int STATUS_OFFLINE = 1;
+    public const int STATUS_ONLINE  = 2;
 
-    public const TYPE_NONE = 0;
-    public const TYPE_TEXT = 1;
-    public const TYPE_PHP  = 2;
-    public const TYPE_FILE = 3;
+    public const int TYPE_NONE = 0;
+    public const int TYPE_TEXT = 1;
+    public const int TYPE_PHP  = 2;
+    public const int TYPE_FILE = 3;
 
 }
