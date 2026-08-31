@@ -43,7 +43,7 @@ class ItemsHandler extends \XoopsPersistableObjectHandler
     }
 
     /**
-     * @param $isNew
+     * @param bool $isNew
      *
      * @return object
      */
@@ -55,8 +55,8 @@ class ItemsHandler extends \XoopsPersistableObjectHandler
     /**
      * retrieve a field
      *
-     * @param $i field id
-     * @param $fields fields
+     * @param mixed $id
+     * @param array|null $fields
      * @return \XoopsObject|null reference to the {@link Get} object
      */
     public function get($id = null, $fields = null)
@@ -76,13 +76,13 @@ class ItemsHandler extends \XoopsPersistableObjectHandler
 
     /**
      * Get Count Items in the database
-     * @param int    $start
-     * @param int    $limit
+     * @param int $start
+     * @param int $limit
      * @param string $sort
      * @param string $order
      * @return int
      */
-    public function getCountItems($start = 0, $limit = 0, $sort = 'item_id ASC, item_name', $order = 'ASC')
+    public function getCountItems(int $start = 0, int $limit = 0, string $sort = 'item_id ASC, item_name', string $order = 'ASC')
     {
         $crCountItems = new \CriteriaCompo();
         $crCountItems = $this->getItemsCriteria($crCountItems, $start, $limit, $sort, $order);
@@ -91,13 +91,13 @@ class ItemsHandler extends \XoopsPersistableObjectHandler
 
     /**
      * Get All Items in the database
-     * @param int    $start
-     * @param int    $limit
+     * @param int $start
+     * @param int $limit
      * @param string $sort
      * @param string $order
      * @return array
      */
-    public function getAllItems($start = 0, $limit = 0, $sort = 'item_id ASC, item_name', $order = 'ASC')
+    public function getAllItems(int $start = 0, int $limit = 0, string $sort = 'item_id ASC, item_name', string $order = 'ASC')
     {
         $crAllItems = new \CriteriaCompo();
         $crAllItems = $this->getItemsCriteria($crAllItems, $start, $limit, $sort, $order);
@@ -107,13 +107,13 @@ class ItemsHandler extends \XoopsPersistableObjectHandler
     /**
      * Get Criteria Items
      * @param        $crItems
-     * @param int    $start
-     * @param int    $limit
+     * @param int $start
+     * @param int $limit
      * @param string $sort
      * @param string $order
      * @return int
      */
-    private function getItemsCriteria($crItems, $start, $limit, $sort, $order)
+    private function getItemsCriteria($crItems, int $start, int $limit, string $sort, string $order)
     {
         $crItems->setStart($start);
         $crItems->setLimit($limit);
