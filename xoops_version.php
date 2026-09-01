@@ -24,10 +24,13 @@ declare(strict_types=1);
 // 
 $moduleDirName      = \basename(__DIR__);
 $moduleDirNameUpper = \mb_strtoupper($moduleDirName);
+
+include \XOOPS_ROOT_PATH . '/modules/' . $moduleDirName . '/preloads/autoloader.php';
+
 // ------------------- Informations ------------------- //
 $modversion = [
     'name'                => \_MI_WGBLOCKS_NAME,
-    'version'             => '1.2.0',
+    'version'             => '1.2.1',
     'release'             => '09/11/2025',
     'release_date'        => '2025/11/09', //yyyy/mm/dd
     'module_status'       => 'Beta',
@@ -44,8 +47,8 @@ $modversion = [
     'release_file'        => \XOOPS_URL . '/modules/wgblocks/docs/release_info file',
     'manual'              => 'link to manual file',
     'manual_file'         => \XOOPS_URL . '/modules/wgblocks/docs/install.txt',
-    'min_php'             => '8.4',
-    'min_xoops'           => '2.5.12 Beta8',
+    'min_php'             => '8.5',
+    'min_xoops'           => '2.7.3',
     'min_admin'           => '1.2',
     'min_db'              => ['mysql' => '5.7.8', 'mysqli' => '5.7.8'],
     'image'               => 'assets/images/logoModule.png',
@@ -156,6 +159,24 @@ $modversion['config'][] = [
     'name'        => 'displaySampleButton',
     'title'       => 'CO_' . $moduleDirNameUpper . '_' . 'SHOW_SAMPLE_BUTTON',
     'description' => 'CO_' . $moduleDirNameUpper . '_' . 'SHOW_SAMPLE_BUTTON_DESC',
+    'formtype'    => 'yesno',
+    'valuetype'   => 'int',
+    'default'     => 1,
+];
+// Make tab clone visible?
+$modversion['config'][] = [
+    'name'        => 'displayTabClone',
+    'title'       => '_MI_' . $moduleDirNameUpper . '_' . 'SHOW_TAB_CLONE',
+    'description' => '',
+    'formtype'    => 'yesno',
+    'valuetype'   => 'int',
+    'default'     => 1,
+];
+// Make tab feedback visible?
+$modversion['config'][] = [
+    'name'        => 'displayTabFeedback',
+    'title'       => '_MI_' . $moduleDirNameUpper . '_' . 'SHOW_TAB_FEEDBACK',
+    'description' => '',
     'formtype'    => 'yesno',
     'valuetype'   => 'int',
     'default'     => 1,

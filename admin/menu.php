@@ -27,6 +27,8 @@ $xoopsModule   = XoopsModule::getByDirname($dirname);
 $moduleInfo    = $moduleHandler->get($xoopsModule->getVar('mid'));
 $sysPathIcon32 = $moduleInfo->getInfo('sysicons32');
 
+$helper = \XoopsModules\Wgblocks\Helper::getInstance();
+
 $adminmenu[] = [
     'title' => \_MI_WGBLOCKS_ADMENU1,
     'link' => 'admin/index.php',
@@ -37,16 +39,20 @@ $adminmenu[] = [
     'link' => 'admin/items.php',
     'icon' => 'assets/icons/32/items.png',
 ];
-$adminmenu[] = [
-    'title' => \_MI_WGBLOCKS_ADMENU3,
-    'link' => 'admin/clone.php',
-    'icon' => 'assets/icons/32/clone.png',
-];
-$adminmenu[] = [
-    'title' => \_MI_WGBLOCKS_ADMENU4,
-    'link' => 'admin/feedback.php',
-    'icon' => 'assets/icons/32/feedback.png',
-];
+if ($helper->getConfig('displayTabClone')) {
+    $adminmenu[] = [
+        'title' => \_MI_WGBLOCKS_ADMENU3,
+        'link' => 'admin/clone.php',
+        'icon' => 'assets/icons/32/clone.png',
+    ];
+}
+if ($helper->getConfig('displayTabFeedback')) {
+    $adminmenu[] = [
+        'title' => \_MI_WGBLOCKS_ADMENU4,
+        'link' => 'admin/feedback.php',
+        'icon' => 'assets/icons/32/feedback.png',
+    ];
+}
 $adminmenu[] = [
     'title' => \_MI_WGBLOCKS_ABOUT,
     'link' => 'admin/about.php',

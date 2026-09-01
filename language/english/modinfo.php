@@ -49,4 +49,6 @@ require_once __DIR__ . '/common.php';
 \define('_MI_WGBLOCKS_IDPAYPAL_DESC', 'Insert here your PayPal ID for donations');
 \define('_MI_WGBLOCKS_MAINTAINEDBY', 'Maintained By');
 \define('_MI_WGBLOCKS_MAINTAINEDBY_DESC', 'Allow url of support site or community');
+\define('_MI_WGBLOCKS_SHOW_TAB_CLONE', 'Show tab "Clone" on dashboard page');
+\define('_MI_WGBLOCKS_SHOW_TAB_FEEDBACK', 'Show tab "Feedback" on dashboard page');
 // ---------------- End ----------------
