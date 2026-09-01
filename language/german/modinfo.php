@@ -50,5 +50,5 @@ require_once __DIR__ . '/common.php';
 \define('_MI_WGBLOCKS_MAINTAINEDBY', 'Unterstützt durch');
 \define('_MI_WGBLOCKS_MAINTAINEDBY_DESC', 'Erlaubt Url für Support-/Communityseite');
 \define('_MI_WGBLOCKS_SHOW_TAB_CLONE', 'Register "Klonen" auf Übersichtsseite anzeigen');
-\define('_MI_WGBLOCKS_SHOW_TAB_FEEDBACK', 'Register "Feedback" auf Übersichtsseite anzeigene');
+\define('_MI_WGBLOCKS_SHOW_TAB_FEEDBACK', 'Register "Feedback" auf Übersichtsseite anzeigen');
 // ---------------- End ----------------
