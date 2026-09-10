@@ -157,8 +157,8 @@ $modversion['config'][] = [
 // Make Sample button visible?
 $modversion['config'][] = [
     'name'        => 'displaySampleButton',
-    'title'       => 'CO_' . $moduleDirNameUpper . '_' . 'SHOW_SAMPLE_BUTTON',
-    'description' => 'CO_' . $moduleDirNameUpper . '_' . 'SHOW_SAMPLE_BUTTON_DESC',
+    'title'       => '_CO_WGBLOCKS_SHOW_SAMPLE_BUTTON',
+    'description' => '_CO_WGBLOCKS_SHOW_SAMPLE_BUTTON_DESC',
     'formtype'    => 'yesno',
     'valuetype'   => 'int',
     'default'     => 1,
@@ -190,3 +190,4 @@ $modversion['config'][] = [
     'valuetype'   => 'text',
     'default'     => 'https://xoops.org/modules/newbb',
 ];
+

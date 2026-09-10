@@ -95,6 +95,12 @@ function b_wgblocks_items_show($options)
         }
     }
 
+    $urlAdmin = '';
+    $xoopsModule = XoopsModule::getByDirname('wgblocks');
+    if (($GLOBALS['xoopsUser'] instanceof \XoopsUser) && $GLOBALS['xoopsUser']->isAdmin($xoopsModule->mid())) {
+        $urlAdmin = WGBLOCKS_URL . '/admin/index.php';
+    }
+    $GLOBALS['xoopsTpl']->assign('wgblocks_urladmin', $urlAdmin);
     return $block;
 
 }

@@ -25,3 +25,4 @@ declare(strict_types=1);
 \define('_MB_WGBLOCKS_ITEMS_TO_DISPLAY', 'Anzuzeigende Einträge');
 \define('_MB_WGBLOCKS_ERROR_FILENOTFOUND', 'Fehler: Datei nicht gefunden');
 \define('_MB_WGBLOCKS_ERROR_FUNCNOTFOUND', 'Fehler: Funktion nicht gefunden');
+\define('_MB_WGBLOCKS_ADMIN', 'Inhalt verwalten');
