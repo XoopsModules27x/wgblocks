@@ -6,7 +6,7 @@
  - replaced deprecated queryF (goffy)
  - change language CO_ to _CO_ (goffy)
  - added admin link to blocks (goffy)
- 
+
 ==============================================================
 1.2.0 [2025/11/08] Beta: XOOPS 2.5.12 Beta, PHP 8.4.0
 ==============================================================
