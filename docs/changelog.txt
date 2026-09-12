@@ -1,8 +1,11 @@
 ==============================================================
-1.2.1 [2026/09/01] XOOPS 2.7-3, PHP 8.5.10
+1.2.1 [2026/09/01] XOOPS 2.7.3, PHP 8.5.10
 ==============================================================
  - move to PHP 8.5.* (goffy)
  - new preferences for displaying clone/feedback tabs (goffy)
+ - replaced deprecated queryF (goffy)
+ - change language CO_ to _CO_ (goffy)
+ - added admin link to blocks (goffy)
 
 ==============================================================
 1.2.0 [2025/11/08] Beta: XOOPS 2.5.12 Beta, PHP 8.4.0

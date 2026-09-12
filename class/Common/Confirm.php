@@ -70,9 +70,9 @@ class Confirm
         $moduleDirName      = \basename(__DIR__);
         $moduleDirNameUpper = \mb_strtoupper($moduleDirName);
         //in order to be accessable from user and admin area this should be place in language common.php
-        if (!\defined('CO_' . $moduleDirNameUpper . '_DELETE_CONFIRM')) {
-            \define('CO_' . $moduleDirNameUpper . '_DELETE_CONFIRM', 'Confirm delete');
-            \define('CO_' . $moduleDirNameUpper . '_DELETE_LABEL', 'Do you really want to delete:');
+        if (!\defined('_CO_WGBLOCKS_DELETE_CONFIRM')) {
+            \define('_CO_WGBLOCKS_DELETE_CONFIRM', 'Confirm delete');
+            \define('_CO_WGBLOCKS_DELETE_LABEL', 'Do you really want to delete:');
         }
 
         // Get Theme Form
@@ -80,11 +80,11 @@ class Confirm
             $this->action = \Xmf\Request::getString('REQUEST_URI', '', 'SERVER');
         }
         if ('' === $this->title) {
-            $this->title = \constant('CO_' . $moduleDirNameUpper . '_DELETE_CONFIRM');
+            $this->title = \constant('_CO_WGBLOCKS_DELETE_CONFIRM');
         }
         if ('' === $this->label) {
 
-            $this->label = \constant('CO_' . $moduleDirNameUpper . '_DELETE_LABEL');
+            $this->label = \constant('_CO_WGBLOCKS_DELETE_LABEL');
         }
 
         \xoops_load('XoopsFormLoader');
