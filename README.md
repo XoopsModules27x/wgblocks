@@ -2,8 +2,11 @@
 
 ![alt XOOPS CMS](https://xoops.org/images/logoXoopsPhp8.png)
 
+
 # wgBlocks
 A simple Xoops module for presentation of information in one or more blocks.
+
+![module image](./assets/images/wgblocks.png)
 
 # Support
 
