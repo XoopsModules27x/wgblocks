@@ -7,6 +7,6 @@
         <{/foreach}>
     </ul>
     <{if $wgblocks_urladmin|default:false}>
-        <div class="center"><a class="btn btn-primary" href="<{$wgblocks_urladmin}>"><{$smarty.const._MB_WGBLOCKS_ADMIN}></a></div>
+        <div class="center"><a class="btn btn-primary" href="<{$wgblocks_urladmin}>" target="_blank"><{$smarty.const._MB_WGBLOCKS_ADMIN}></a></div>
     <{/if}>
 <{/if}>
