@@ -22,6 +22,8 @@ namespace XoopsModules\Wgblocks\Common;
  * @author       Mamba <mambax7@gmail.com>
  */
 
+defined('XOOPS_ROOT_PATH') || exit('Restricted access');
+
 use Xmf\Module\Admin;
 use Xmf\Request;
 use XoopsModules\Wgblocks\Helper;

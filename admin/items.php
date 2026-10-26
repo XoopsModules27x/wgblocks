@@ -26,7 +26,7 @@ use XoopsModules\Wgblocks;
 use XoopsModules\Wgblocks\Constants;
 use XoopsModules\Wgblocks\Common;
 
-require __DIR__ . '/header.php';
+require_once __DIR__ . '/header.php';
 // Get all request values
 $op     = Request::getCmd('op', 'list');
 $itemId = Request::getInt('item_id');
@@ -62,7 +62,7 @@ switch ($op) {
                     case Constants::TYPE_PHP:
                         $file = \WGBLOCKS_UPLOAD_FUNC_PATH . '/' .$itemsAll[$i]->getVar('item_file');
                         $func = $itemsAll[$i]->getVar('item_func');
-                        if (\file_exists($file)) {
+                        if (\file_exists($file) && is_file($file)) {
                             $item['file_check'] = 'ok.png';
                             include_once $file;
                             if (\function_exists($func)){
@@ -162,7 +162,7 @@ switch ($op) {
         $itemsObj->setVar('item_submitter', Request::getInt('item_submitter'));
         // Insert Data
         if ($itemsHandler->insert($itemsObj)) {
-                \redirect_header('items.php?op=list&amp;start=' . $start . '&amp;limit=' . $limit, 2, \_AM_WGBLOCKS_FORM_OK);
+                \redirect_header('items.php?op=list&start=' . $start . '&limit=' . $limit, 2, \_AM_WGBLOCKS_FORM_OK);
         }
         // Get Form
         $GLOBALS['xoopsTpl']->assign('error', $itemsObj->getHtmlErrors());
@@ -206,4 +206,4 @@ switch ($op) {
         }
         break;
 }
-require __DIR__ . '/footer.php';
+require_once __DIR__ . '/footer.php';

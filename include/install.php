@@ -18,6 +18,8 @@
  * @author         Wedega - Email:<webmaster@wedega.com> - Website:<https://wedega.com> XOOPS Project (www.xoops.org) $
  */
 
+defined('XOOPS_ROOT_PATH') || exit('Restricted access');
+
 use XoopsModules\Wgblocks;
 use XoopsModules\Wgblocks\Common;
 

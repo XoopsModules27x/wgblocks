@@ -26,6 +26,8 @@ namespace XoopsModules\Wgblocks;
  * @since
  */
 
+defined('XOOPS_ROOT_PATH') || exit('Restricted access');
+
 use XoopsModules\Wgblocks;
 
 /**

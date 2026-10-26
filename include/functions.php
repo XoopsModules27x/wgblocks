@@ -21,6 +21,8 @@ declare(strict_types=1);
  * @author       Goffy - Wedega.com - Email:webmaster@wedega.com - Website:https://xoops.wedega.com
  */
 
+defined('XOOPS_ROOT_PATH') || exit('Restricted access');
+
 /**
  * function add selected cats to block
  *

@@ -82,11 +82,7 @@ $modversion['templates'] = [
     ['file' => 'wgblocks_admin_items.tpl', 'description' => '', 'type' => 'admin'],
     ['file' => 'wgblocks_admin_clone.tpl', 'description' => '', 'type' => 'admin'],
     ['file' => 'wgblocks_admin_footer.tpl', 'description' => '', 'type' => 'admin'],
-    // User templates
-    ['file' => 'wgblocks_header.tpl', 'description' => ''],
-    ['file' => 'wgblocks_index.tpl', 'description' => ''],
-    ['file' => 'wgblocks_breadcrumbs.tpl', 'description' => ''],
-    ['file' => 'wgblocks_footer.tpl', 'description' => ''],
+    // no special user templates
 ];
 // ------------------- Mysql ------------------- //
 $modversion['sqlfile']['mysql'] = 'sql/mysql.sql';

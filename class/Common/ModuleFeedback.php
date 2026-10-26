@@ -22,6 +22,8 @@ namespace XoopsModules\Wgblocks\Common;
  * @author         Fernando Santos (topet05) <fernando@mastop.com.br>
  */
 
+defined('XOOPS_ROOT_PATH') || exit('Restricted access');
+
 /**
  * Class Object ModuleFeedback
  */

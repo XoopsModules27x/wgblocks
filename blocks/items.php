@@ -63,7 +63,7 @@ function b_wgblocks_items_show($options)
                 case Constants::TYPE_PHP:
                     $file = \WGBLOCKS_UPLOAD_FUNC_PATH . '/' .$itemsAll[$i]->getVar('item_file');
                     $func = $itemsAll[$i]->getVar('item_func');
-                    if (\file_exists($file)) {
+                    if (\file_exists($file) && is_file($file)) {
                         include_once $file;
                         if (\function_exists($func)){
                             $content = call_user_func($func);
@@ -76,7 +76,7 @@ function b_wgblocks_items_show($options)
                     break;
                 case Constants::TYPE_FILE:
                     $file = \WGBLOCKS_UPLOAD_FILES_PATH . '/' .$itemsAll[$i]->getVar('item_file');
-                    if (\file_exists($file)) {
+                    if (\file_exists($file) && is_file($file)) {
                         $fileRes = fopen($file,'r');
                         $content = fread($fileRes, filesize($file));
                         fclose($fileRes);
