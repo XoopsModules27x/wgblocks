@@ -20,6 +20,8 @@ namespace XoopsModules\Wgblocks\Common;
  * @author          Xoops Development Team
  */
 
+defined('XOOPS_ROOT_PATH') || exit('Restricted access');
+
 /**
  * Class DirectoryChecker
  * check status of a directory

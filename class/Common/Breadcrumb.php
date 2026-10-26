@@ -27,6 +27,8 @@ namespace XoopsModules\Wgblocks\Common;
  * echo $breadcrumb->render();
  */
 
+defined('XOOPS_ROOT_PATH') || exit('Restricted access');
+
 /**
  * Class Breadcrumb
  */

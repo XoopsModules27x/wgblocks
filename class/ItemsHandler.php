@@ -24,6 +24,8 @@ namespace XoopsModules\Wgblocks;
  * @author       Goffy - Wedega.com - Email:webmaster@wedega.com - Website:https://xoops.wedega.com
  */
 
+defined('XOOPS_ROOT_PATH') || exit('Restricted access');
+
 use XoopsModules\Wgblocks;
 
 
