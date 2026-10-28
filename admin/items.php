@@ -41,9 +41,9 @@ switch ($op) {
         // Define Stylesheet
         $GLOBALS['xoTheme']->addStylesheet($style, null);
         $templateMain = 'wgblocks_admin_items.tpl';
-        $GLOBALS['xoopsTpl']->assign('navigation', $adminObject->displayNavigation('items.php'));
+        $GLOBALS['xoopsTpl']->assign('navigation', $adminObject->renderNavigation('items.php'));
         $adminObject->addItemButton(\_AM_WGBLOCKS_ADD_ITEM, 'items.php?op=new');
-        $GLOBALS['xoopsTpl']->assign('buttons', $adminObject->displayButton('left'));
+        $GLOBALS['xoopsTpl']->assign('buttons', $adminObject->renderButton('left'));
         $itemsCount = $itemsHandler->getCountItems();
         $itemsAll = $itemsHandler->getAllItems($start, $limit);
         $GLOBALS['xoopsTpl']->assign('items_count', $itemsCount);
@@ -114,9 +114,9 @@ switch ($op) {
         break;
     case 'new':
         $templateMain = 'wgblocks_admin_items.tpl';
-        $GLOBALS['xoopsTpl']->assign('navigation', $adminObject->displayNavigation('items.php'));
+        $GLOBALS['xoopsTpl']->assign('navigation', $adminObject->renderNavigation('items.php'));
         $adminObject->addItemButton(\_AM_WGBLOCKS_LIST_ITEMS, 'items.php', 'list');
-        $GLOBALS['xoopsTpl']->assign('buttons', $adminObject->displayButton('left'));
+        $GLOBALS['xoopsTpl']->assign('buttons', $adminObject->renderButton('left'));
         // Form Create
         $itemsObj = $itemsHandler->create();
         $form = $itemsObj->getFormItems();
@@ -124,10 +124,10 @@ switch ($op) {
         break;
     case 'clone':
         $templateMain = 'wgblocks_admin_items.tpl';
-        $GLOBALS['xoopsTpl']->assign('navigation', $adminObject->displayNavigation('items.php'));
+        $GLOBALS['xoopsTpl']->assign('navigation', $adminObject->renderNavigation('items.php'));
         $adminObject->addItemButton(\_AM_WGBLOCKS_LIST_ITEMS, 'items.php', 'list');
         $adminObject->addItemButton(\_AM_WGBLOCKS_ADD_ITEM, 'items.php?op=new');
-        $GLOBALS['xoopsTpl']->assign('buttons', $adminObject->displayButton('left'));
+        $GLOBALS['xoopsTpl']->assign('buttons', $adminObject->renderButton('left'));
         // Request source
         $itemIdSource = Request::getInt('item_id_source');
         // Get Form
@@ -171,10 +171,10 @@ switch ($op) {
         break;
     case 'edit':
         $templateMain = 'wgblocks_admin_items.tpl';
-        $GLOBALS['xoopsTpl']->assign('navigation', $adminObject->displayNavigation('items.php'));
+        $GLOBALS['xoopsTpl']->assign('navigation', $adminObject->renderNavigation('items.php'));
         $adminObject->addItemButton(\_AM_WGBLOCKS_ADD_ITEM, 'items.php?op=new');
         $adminObject->addItemButton(\_AM_WGBLOCKS_LIST_ITEMS, 'items.php', 'list');
-        $GLOBALS['xoopsTpl']->assign('buttons', $adminObject->displayButton('left'));
+        $GLOBALS['xoopsTpl']->assign('buttons', $adminObject->renderButton('left'));
         // Get Form
         $itemsObj = $itemsHandler->get($itemId);
         $itemsObj->start = $start;
@@ -184,7 +184,7 @@ switch ($op) {
         break;
     case 'delete':
         $templateMain = 'wgblocks_admin_items.tpl';
-        $GLOBALS['xoopsTpl']->assign('navigation', $adminObject->displayNavigation('items.php'));
+        $GLOBALS['xoopsTpl']->assign('navigation', $adminObject->renderNavigation('items.php'));
         $itemsObj = $itemsHandler->get($itemId);
         $itemName = $itemsObj->getVar('item_name');
         if (1 === \Xmf\Request::getInt('ok', 'REQUEST')) {
