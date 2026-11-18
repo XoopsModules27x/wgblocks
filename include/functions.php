@@ -24,26 +24,6 @@ declare(strict_types=1);
 defined('XOOPS_ROOT_PATH') || exit('Restricted access');
 
 /**
- * function add selected cats to block
- *
- * @param  $cats
- * @return string
- */
-function wgblocks_block_addCatSelect($cats)
-{
-    $cat_sql = '(';
-    if (\is_array($cats)) {
-        $cat_sql .= current($cats);
-        array_shift($cats);
-        foreach ($cats as $cat) {
-            $cat_sql .= ',' . $cat;
-        }
-    }
-    $cat_sql .= ')';
-    return $cat_sql;
-}
-
-/**
  * Add content as meta tag to template
  * @param $content
  * @return void
